@@ -1,0 +1,130 @@
+
+* {
+  margin: 0;
+  
+  padding: 0;
+  box-sizing: border-box; /* Add box-sizing to prevent unexpected layout issues */
+}
+
+body {
+  background-color: #000000;
+  color: rgb(244, 244, 249);
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Add a font-family for consistency */
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  flex-direction: column; /* Use column for vertical stacking */
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  max-width: 100%; /* Ensure the game doesn't overflow its container */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  max-width: calc(100% / 3 - 15px); /* Calculate width based on 3 items per row minus gap */
+  border-radius: 5px;
+  border: none;
+  font-size: 3vmin; /* Use vmin for font size to scale with viewport */
+  color: #054744;
+  background-color: #e4b7e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn, #new-btn {
+  height: 50px;
+  width: 200px;
+  max-width: 100%; /* Ensure the button doesn't overflow its container */
+  border-radius: 5px;
+  font-size: 1.25rem;
+  margin: 10px 0; /* Add some space above and below the buttons */
+}
+
+#btn {
+  background-color: #3a3333;
+  color: azure;
+  border: 1px solid #e4b7e5;
+  font-style: italic;
+}
+
+#new-btn {
+  display: block;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: 1px solid #e4b7e5;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+}
+
+.msg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.conatiner1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 5px; /* Add some padding around the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.conatiner1 h1 {
+  font-size: 2rem; /* Set a base font size */
+  margin-bottom: 20px; /* Add some space below the heading */
+  text-align: center; /* Center the text */
+}
+
+@media screen and (max-width: 600px) {
+  
+  #msg {
+    font-size: 5vmin; /* Adjust message size for smaller screens */
+  }
+
+  .msg-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  
+  }
+
+  .container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column; /* Use column for vertical stacking */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+}
